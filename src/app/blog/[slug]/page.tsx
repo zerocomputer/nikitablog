@@ -15,9 +15,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-
   if (!post) return {};
-
   return {
     title: post.title,
     description: post.excerpt,
@@ -33,27 +31,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PostPage({ params }: Props) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-
   if (!post) notFound();
 
   return (
-    <article className="max-w-3xl mx-auto px-4 py-16">
+    <article className="max-w-3xl mx-auto px-6 py-16">
       <Link
         href="/blog"
-        className="inline-flex items-center text-sm text-gray-500 hover:text-gray-900 transition-colors mb-8"
+        className="inline-flex items-center text-sm text-gray-500 hover:text-blue-400 transition-colors mb-8"
       >
         ← Назад к блогу
       </Link>
 
       <header className="mb-8">
-        <time className="text-xs text-gray-400 uppercase tracking-wide">
+        <time className="text-xs text-gray-500 uppercase tracking-wide">
           {new Date(post.date).toLocaleDateString("ru-RU", {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}
         </time>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white">
           {post.title}
         </h1>
         {post.tags && post.tags.length > 0 && (
@@ -61,7 +58,7 @@ export default async function PostPage({ params }: Props) {
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-block px-2 py-0.5 text-xs font-medium bg-gray-50 text-gray-500 rounded-full"
+                className="inline-block px-2 py-0.5 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md"
               >
                 #{tag}
               </span>
@@ -71,7 +68,7 @@ export default async function PostPage({ params }: Props) {
       </header>
 
       <div
-        className="prose prose-gray max-w-none prose-headings:font-semibold prose-a:text-blue-600"
+        className="prose prose-invert max-w-none prose-headings:text-white prose-a:text-blue-400"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </article>

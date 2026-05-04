@@ -13,13 +13,13 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-      <nav className="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
+    <header className="border-b border-zinc-800 bg-[#0f0f12]/80 backdrop-blur-sm sticky top-0 z-50">
+      <nav className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="text-xl font-bold text-gray-900 tracking-tight hover:text-blue-600 transition-colors"
+          className="text-lg font-bold text-white tracking-tight hover:text-blue-400 transition-colors"
         >
-          nikitablog
+          <span className="text-blue-400">@</span>zerocomputer
         </Link>
 
         <ul className="flex items-center gap-1">
@@ -31,8 +31,8 @@ export default function Header() {
                   href={item.href}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      ? "bg-blue-500/10 text-blue-400"
+                      : "text-gray-400 hover:text-gray-200 hover:bg-zinc-800"
                   }`}
                 >
                   {item.label}

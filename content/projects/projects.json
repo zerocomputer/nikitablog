@@ -1,38 +1,40 @@
 [
   {
-    "slug": "steppesolutions-website",
-    "title": "SteppeSolutions Website",
-    "description": "Корпоративный сайт компании. Современный дизайн, высокая производительность, интеграция с CRM.",
-    "github": "https://github.com/nikita/steppesolutions",
+    "slug": "sources-admission",
+    "title": "Заявки на допуск для ООО \"Сладковско-Заречное\"",
+    "description": "Веб-приложение, являющееся частью информационной системы для подачи и обработки заявок на допуск.",
+    "longDescription": "Lorem ipsum dolor sit amet consectetur. Eget eget eu aenean rhoncus et integer cursus. Mauris et eget leo tincidunt quis habitant sociis. Nunc feugiat iaculis fringilla blandit.",
+    "role": "Fullstack разработчик",
+    "tags": ["Laravel", "PHP", "MariaDB", "Metronic UI"],
     "status": "active",
-    "tags": ["Next.js", "Tailwind", "TypeScript"],
     "featured": true
   },
   {
-    "slug": "nikita-blog",
-    "title": "Личный блог",
-    "description": "Этот самый блог. Минималистичный, быстрый, на Next.js с SSG и Markdown.",
-    "github": "https://github.com/nikita/nikitablog",
+    "slug": "yes-crm",
+    "title": "Y.E.S. CRM",
+    "description": "Client Relation Management для Y.E.S. School. Система управления взаимоотношениями с клиентами.",
+    "longDescription": "Lorem ipsum dolor sit amet consectetur. Turpis erat morbi a sagittis dignissim gravida diam. Quis auctor sed facilisi tortor.",
+    "role": "Fullstack разработчик",
+    "tags": ["NestJS", "Vue 3", "PostgreSQL", "Docker"],
     "status": "active",
-    "tags": ["Next.js", "Tailwind", "PWA"],
     "featured": true
   },
   {
-    "slug": "taskflow",
-    "title": "TaskFlow",
-    "description": "Инструмент для управления задачами с AI-ассистентом. Помогает командам Stay organized.",
-    "github": "https://github.com/nikita/taskflow",
+    "slug": "messenger",
+    "title": "Closed Messenger (PWA)",
+    "description": "Закрытый мессенджер для своих. Next.js + NestJS + Prisma + PostgreSQL + IndexedDB.",
+    "role": "CEO / Архитектор",
+    "tags": ["Next.js", "NestJS", "Prisma", "PostgreSQL", "PWA"],
     "status": "active",
-    "tags": ["React", "Node.js", "AI"],
     "featured": true
   },
   {
-    "slug": "openclaw-plugin-kit",
-    "title": "OpenClaw Plugin Kit",
-    "description": "Набор инструментов для создания плагинов к OpenClaw. Документация, примеры, CLI.",
-    "github": "https://github.com/nikita/openclaw-plugin-kit",
-    "status": "beta",
-    "tags": ["TypeScript", "CLI", "OpenClaw"],
-    "featured": false
+    "slug": "nikitablog",
+    "title": "Личный блог / Портфолио",
+    "description": "Этот сайт. Минималистичный портфолио-лендинг с блогом на Next.js SSG.",
+    "role": "Fullstack разработчик",
+    "tags": ["Next.js", "Tailwind", "PWA", "TypeScript"],
+    "status": "active",
+    "featured": true
   }
 ]

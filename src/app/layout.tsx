@@ -16,21 +16,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Никита — личный блог",
-    template: "%s — Никита",
+    default: "@zerocomputer | Никита Сарычев",
+    template: "%s | Никита Сарычев",
   },
   description:
-    "Личный блог Никиты. Жизнь, проекты, технологии и всё, что между ними.",
+    "Full-Stack разработчик. Laravel, NestJS, Next.js, Vue, React.",
   openGraph: {
-    title: "Никита — личный блог",
-    description:
-      "Личный блог Никиты. Жизнь, проекты, технологии и всё, что между ними.",
+    title: "@zerocomputer | Никита Сарычев",
+    description: "Full-Stack разработчик",
     type: "website",
     locale: "ru_RU",
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
@@ -42,13 +37,13 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#0f0f12" />
       </head>
-      <body className="min-h-full flex flex-col bg-white text-gray-900 font-sans">
+      <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

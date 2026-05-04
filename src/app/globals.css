@@ -1,20 +1,40 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg-primary: #0f0f12;
+  --color-bg-secondary: #1a1a22;
+  --color-bg-card: #1f1f28;
+  --color-bg-hover: #28283a;
+  --color-text-primary: #e4e4e7;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-border: #27272a;
+  --color-success: #22c55e;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background: #0f0f12;
+  color: #e4e4e7;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0f0f12; }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+
+/* Typography prose for blog posts (dark theme) */
+.prose {
+  --tw-prose-body: #d4d4d8;
+  --tw-prose-headings: #e4e4e7;
+  --tw-prose-links: #3b82f6;
+  --tw-prose-bold: #e4e4e7;
+  --tw-prose-code: #e4e4e7;
+  --tw-prose-quotes: #a1a1aa;
+  --tw-prose-quote-borders: #3b82f6;
 }

@@ -5,7 +5,9 @@ export interface Project {
   slug: string;
   title: string;
   description: string;
-  github: string;
+  longDescription?: string;
+  role?: string;
+  github?: string;
   status: "active" | "beta" | "archived";
   tags: string[];
   featured: boolean;

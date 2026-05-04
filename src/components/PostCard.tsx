@@ -5,20 +5,20 @@ export default function PostCard({ post }: { post: PostMeta }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block p-6 rounded-xl border border-gray-100 bg-white hover:border-blue-200 hover:shadow-sm transition-all"
+      className="group block p-6 rounded-2xl bg-[#1a1a22] border border-zinc-800 hover:border-blue-500/50 hover:bg-[#1f1f2a] transition-all"
     >
       <article>
-        <time className="text-xs text-gray-400 uppercase tracking-wide">
+        <time className="text-xs text-gray-500 uppercase tracking-wide">
           {new Date(post.date).toLocaleDateString("ru-RU", {
             year: "numeric",
             month: "long",
             day: "numeric",
           })}
         </time>
-        <h2 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+        <h2 className="mt-2 text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
           {post.title}
         </h2>
-        <p className="mt-2 text-sm text-gray-600 leading-relaxed line-clamp-2">
+        <p className="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2">
           {post.excerpt}
         </p>
         {post.tags && post.tags.length > 0 && (
@@ -26,9 +26,9 @@ export default function PostCard({ post }: { post: PostMeta }) {
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-block px-2 py-0.5 text-xs font-medium bg-gray-50 text-gray-500 rounded-full"
+                className="inline-block px-2 py-0.5 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md"
               >
-                #{tag}
+                {tag}
               </span>
             ))}
           </div>
