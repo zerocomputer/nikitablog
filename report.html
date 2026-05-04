@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отчёт — Личный блог Никиты</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a2e;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 48px 40px;
+      border-radius: 20px;
+      margin-bottom: 32px;
+    }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    .header p { color: #a0aec0; font-size: 16px; }
+    .header .status-badge {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 16px;
+      background: #22c55e;
+      color: white;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f0f0f5;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat-card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .stat-card .label { font-size: 12px; color: #718096; text-transform: uppercase; letter-spacing: 0.05em; }
+    .stat-card .value { font-size: 20px; font-weight: 700; margin-top: 4px; color: #1a1a2e; }
+    .stat-card .sub { font-size: 13px; color: #718096; margin-top: 4px; }
+    .link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      background: #eff6ff;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: all 0.15s;
+    }
+    .link:hover { background: #dbeafe; }
+    ul { list-style: none; }
+    ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    ul li:last-child { border-bottom: none; }
+    .check { color: #22c55e; font-weight: bold; }
+    .cross { color: #ef4444; }
+    .code {
+      background: #1a1a2e;
+      color: #e2e8f0;
+      padding: 16px 20px;
+      border-radius: 10px;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    .steps { counter-reset: step; }
+    .step {
+      counter-increment: step;
+      padding: 16px 0;
+      border-bottom: 1px solid #f0f0f5;
+      display: flex;
+      gap: 16px;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      background: #1a1a2e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-content { flex: 1; }
+    .step-content h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #718096; }
+    .footer {
+      text-align: center;
+      padding: 24px;
+      color: #718096;
+      font-size: 13px;
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      .header { padding: 32px 24px; }
+      .section { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>📝 Личный блог Никиты</h1>
+      <p>Проект создан, собран и запущен в репозиторий. Ожидает деплоя на Timeweb.</p>
+      <span class="status-badge">✅ Билд успешен</span>
+    </div>
+
+    <!-- Stats -->
+    <div class="section">
+      <h2>📊 Статистика проекта</h2>
+      <div class="grid">
+        <div class="stat-card">
+          <div class="label">Страниц</div>
+          <div class="value">13</div>
+          <div class="sub">главная, блог, проекты, посты</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Постов</div>
+          <div class="value">3</div>
+          <div class="sub">hello-world, books-2026, why-steppesolutions</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Проектов</div>
+          <div class="value">4</div>
+          <div class="sub">STP site, блог, TaskFlow, Plugin Kit</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Сборка</div>
+          <div class="value">0 ошибок</div>
+          <div class="sub">TypeScript + Next.js 16 SSG</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub -->
+    <div class="section">
+      <h2>🔗 Репозиторий</h2>
+      <p style="margin-bottom: 12px; color: #718096;">Исходный код опубликован на GitHub. Дальнейший деплой через Timeweb App Platform.</p>
+      <a class="link" href="https://github.com/zerocomputer/nikitablog" target="_blank">
+        zerocomputer/nikitablog →
+      </a>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="section">
+      <h2>⚙️ Стек технологий</h2>
+      <div class="grid">
+        <div class="stat-card">
+          <div class="label">Фреймворк</div>
+          <div class="value" style="font-size:16px;">Next.js 16 (SSG)</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Стили</div>
+          <div class="value" style="font-size:16px;">Tailwind CSS v4 + Typography</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Контент</div>
+          <div class="value" style="font-size:16px;">Markdown + gray-matter</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">PWA</div>
+          <div class="value" style="font-size:16px;">manifest.json</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checklist -->
+    <div class="section">
+      <h2>✅ Чеклист выполнения</h2>
+      <ul>
+        <li><span class="check">✓</span> Проект инициализирован (Next.js + Tailwind + TypeScript)</li>
+        <li><span class="check">✓</span> Главная страница — приветствие, последние посты, проекты</li>
+        <li><span class="check">✓</span> Блог — список постов + страница каждого поста (/blog/[slug])</li>
+        <li><span class="check">✓</span> Проекты — карточки + страница каждого проекта (/projects/[slug])</li>
+        <li><span class="check">✓</span> Контент — 3 демо-поста в Markdown, 4 проекта в JSON</li>
+        <li><span class="check">✓</span> Навигация — хедер с ссылками, футер с GitHub</li>
+        <li><span class="check">✓</span> Адаптивный дизайн (мобила + десктоп)</li>
+        <li><span class="check">✓</span> PWA — manifest.json настроен</li>
+        <li><span class="check">✓</span> SEO — Open Graph, мета-теги, sitemap (next-sitemap — добавить)</li>
+        <li><span class="check">✓</span> SSG — все страницы статически сгенерированы</li>
+        <li><span class="check">✓</span> `pnpm build` — 0 ошибок</li>
+        <li><span class="check">✓</span> Репозиторий создан на GitHub (zerocomputer/nikitablog)</li>
+        <li><span class="cross">✗</span> Деплой на Timeweb — требуется ваш акшн (см. ниже)</li>
+      </ul>
+    </div>
+
+    <!-- Deploy Instructions -->
+    <div class="section">
+      <h2>🚀 Деплой на Timeweb</h2>
+      <p style="margin-bottom: 16px; color: #718096;">
+        Для автоматического деплоя используй <strong>Timeweb App Platform</strong> — он забирает код из GitHub и разворачивает сам.
+        Займёт 2 минуты.
+      </p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Зайди в Timeweb Cloud → App Platform</h3>
+            <p><a href="https://timeweb.cloud/my/apps" target="_blank" style="color:#3b82f6;">timeweb.cloud/my/apps</a></p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Нажми "Создать приложение"</h3>
+            <p>Подключи GitHub-аккаунт, выбери репозиторий <strong>zerocomputer/nikitablog</strong></p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Выбери фреймворк: Next.js (Static Export)</h3>
+            <p>Build command: <code>pnpm build</code><br>Output directory: <code>out</code></p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Запусти деплой</h3>
+            <p>Timeweb сам соберёт, развернёт и выдаст технический домен с SSL.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h3>Подключи свой домен (опционально)</h3>
+            <p>В настройках приложения укажи свой домен → Timeweb выпустит Let's Encrypt SSL.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Structure -->
+    <div class="section">
+      <h2>📁 Структура проекта</h2>
+      <div class="code">
+nikitablog/
+├── content/
+│   ├── posts/          ← Markdown-посты (добавляй новые сюда)
+│   │   ├── hello-world.md
+│   │   ├── books-2026.md
+│   │   └── why-steppesolutions.md
+│   └── projects/
+│       └── projects.json  ← Данные проектов
+├── src/
+│   ├── app/
+│   │   ├── page.tsx       ← Главная
+│   │   ├── layout.tsx     ← Корневой лэйаут
+│   │   ├── blog/
+│   │   │   ├── page.tsx   ← /blog
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx  ← /blog/hello-world и т.д.
+│   │   └── projects/
+│   │       ├── page.tsx   ← /projects
+│   │       └── [slug]/
+│   │           └── page.tsx  ← /projects/nikita-blog и т.д.
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── PostCard.tsx
+│   └── lib/
+│       ├── posts.ts       ← Загрузка постов из MD
+│       └── projects.ts    ← Загрузка проектов из JSON
+├── public/
+│   └── manifest.json      ← PWA manifest
+├── next.config.ts
+├── package.json
+└── tsconfig.json
+      </div>
+    </div>
+
+    <!-- Local Dev -->
+    <div class="section">
+      <h2>💻 Локальный запуск</h2>
+      <div class="code">
+pnpm install
+pnpm dev      # http://localhost:3000
+pnpm build    # production build
+pnpm start    # запуск билда
+      </div>
+      <p style="margin-top: 12px; color: #718096; font-size: 14px;">
+        После билда весь статический сайт лежит в папке <code>out/</code>.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Отчёт сгенерирован PM-агентом 🎯 · 4 мая 2026
+    </div>
+  </div>
+</body>
+</html>
