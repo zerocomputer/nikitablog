@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "steppesolutions-website",
+    "title": "SteppeSolutions Website",
+    "description": "Корпоративный сайт компании. Современный дизайн, высокая производительность, интеграция с CRM.",
+    "github": "https://github.com/nikita/steppesolutions",
+    "status": "active",
+    "tags": ["Next.js", "Tailwind", "TypeScript"],
+    "featured": true
+  },
+  {
+    "slug": "nikita-blog",
+    "title": "Личный блог",
+    "description": "Этот самый блог. Минималистичный, быстрый, на Next.js с SSG и Markdown.",
+    "github": "https://github.com/nikita/nikitablog",
+    "status": "active",
+    "tags": ["Next.js", "Tailwind", "PWA"],
+    "featured": true
+  },
+  {
+    "slug": "taskflow",
+    "title": "TaskFlow",
+    "description": "Инструмент для управления задачами с AI-ассистентом. Помогает командам Stay organized.",
+    "github": "https://github.com/nikita/taskflow",
+    "status": "active",
+    "tags": ["React", "Node.js", "AI"],
+    "featured": true
+  },
+  {
+    "slug": "openclaw-plugin-kit",
+    "title": "OpenClaw Plugin Kit",
+    "description": "Набор инструментов для создания плагинов к OpenClaw. Документация, примеры, CLI.",
+    "github": "https://github.com/nikita/openclaw-plugin-kit",
+    "status": "beta",
+    "tags": ["TypeScript", "CLI", "OpenClaw"],
+    "featured": false
+  }
+]
