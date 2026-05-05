@@ -11,27 +11,24 @@ export default function Home() {
     {
       period: "ИЮЛЬ 2023 — НАСТ. ВРЕМЯ",
       company: "RedPoint: Двор24",
-      role: "Веб-разработчик (Vue/Laravel)",
-      description:
-        "Продолжил разработку фирменного проекта \"Двор24\". Это монолитное веб-приложение, написанное на PHP (Laravel), в качестве осн. клиентского фреймворка используется Vue 3.",
+      role: "Fullstack-разработчик (Vue/Typescript/Java/Swift/Laravel)",
+      description: "Продолжил разработку фирменного проекта \",
       tags: ["Vue 3", "JavaScript", "TypeScript"],
     },
     {
       period: "СЕН. 2019 — ИЮЛЬ 2023",
-      company: "ГАПОУ \"Оренбургский колледж экономики и информатики\"",
+      company: "ГАПОУ \",
       role: "Веб-разработчик (NestJS, ReactJS, Vue 3)",
-      description:
-        "Занимался командной разработкой проектов для Министерства образования по г. Оренбургу и Оренбургской обл. В команде в основном выполнял роль backend-разработчика.",
+      description: "Занимался командной разработкой проектов для Министерства образования по г. Оренбургу и Оренбургской обл. В команде в основном выполнял роль backend-разработчика.",
       tags: ["NestJS", "PHP", "React", "Vue 3", "JavaScript", "TypeScript"],
     },
     {
       period: "ИЮНЬ 2018 — ОКТ. 2022",
       company: "Freelance · Workzilla.com",
       role: "Дизайнер UI/UX, Fullstack разработчик",
-      description:
-        "Реализовывал самые различные проекты, от простых дизайна сайтов-визиток и их верстки, до веб-приложений, API и дизайна мобильных приложений.",
+      description: "Реализовывал самые различные проекты, от простых дизайна сайтов-визиток и их верстки, до веб-приложений, API и дизайна мобильных приложений.",
       tags: ["NestJS", "React", "Vue 3", "JavaScript", "TypeScript", "PHP", "Laravel"],
-    },
+    }
   ];
 
   return (
@@ -48,7 +45,7 @@ export default function Home() {
           Никита Сарычев
         </h1>
         <p className="mt-2 text-xl text-blue-400 font-medium">
-          Full-Stack разработчик
+          Fullstack разработчик
         </p>
         <p className="mt-4 text-gray-400 text-lg leading-relaxed max-w-2xl">
           Занимаюсь полным циклом разработки различных веб-приложений, начиная
@@ -57,10 +54,10 @@ export default function Home() {
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href="mailto:i@zerocomputer.ru"
+            href="mailto:zerocomputer@yandex.ru"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-xl hover:bg-blue-700 transition-colors"
           >
-            i@zerocomputer.ru
+            zerocomputer@yandex.ru
           </a>
           <a
             href="https://github.com/zerocomputer"
@@ -99,7 +96,7 @@ export default function Home() {
           {projects.map((project) => (
             <Link
               key={project.slug}
-              href={`/projects/${project.slug}`}
+              href={"/projects/" + project.slug}
               className="group block p-6 rounded-2xl bg-[#1a1a22] border border-zinc-800 hover:border-blue-500/50 hover:bg-[#1f1f2a] transition-all"
             >
               <div className="flex items-start justify-between gap-3 mb-3">
@@ -116,10 +113,7 @@ export default function Home() {
               {project.tags && project.tags.length > 0 && (
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-block px-2 py-0.5 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md"
-                    >
+                    <span key={tag} className="inline-block px-2 py-0.5 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
                       {tag}
                     </span>
                   ))}
@@ -139,32 +133,22 @@ export default function Home() {
         <div className="space-y-0">
           {experience.map((exp, idx) => (
             <div key={idx} className="relative pl-8 pb-10 last:pb-0">
-              {/* Timeline line */}
               {idx < experience.length - 1 && (
                 <div className="absolute left-[11px] top-3 bottom-0 w-0.5 bg-zinc-800" />
               )}
-              {/* Dot */}
               <div className="absolute left-0 top-[5px] w-[22px] h-[22px] rounded-full bg-zinc-800 border-[3px] border-[#0f0f12] flex items-center justify-center">
                 <div className="w-2 h-2 rounded-full bg-blue-500" />
               </div>
-              {/* Content */}
               <div>
                 <span className="text-xs text-blue-400 font-semibold tracking-wider">
                   {exp.period}
                 </span>
-                <h3 className="mt-1 text-base font-semibold text-white">
-                  {exp.company}
-                </h3>
+                <h3 className="mt-1 text-base font-semibold text-white">{exp.company}</h3>
                 <p className="text-sm text-blue-300/80 mt-0.5">{exp.role}</p>
-                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
-                  {exp.description}
-                </p>
+                <p className="mt-2 text-sm text-gray-400 leading-relaxed">{exp.description}</p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {exp.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-block px-2 py-0.5 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md"
-                    >
+                    <span key={tag} className="inline-block px-2 py-0.5 text-xs font-medium bg-zinc-800 text-gray-400 rounded-md">
                       {tag}
                     </span>
                   ))}
@@ -175,7 +159,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Recent Blog Posts */}
       {posts.length > 0 && (
         <section className="mb-20">
           <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
@@ -188,10 +171,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-4 text-center">
-            <Link
-              href="/blog"
-              className="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors"
-            >
+            <Link href="/blog" className="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors">
               Все записи →
             </Link>
           </div>
