@@ -5,17 +5,27 @@
     "description": "Веб-приложение, являющееся частью информационной системы для подачи и обработки заявок на допуск.",
     "longDescription": "Lorem ipsum dolor sit amet consectetur. Eget eget eu aenean rhoncus et integer cursus. Mauris et eget leo tincidunt quis habitant sociis. Nunc feugiat iaculis fringilla blandit.",
     "role": "Fullstack разработчик",
-    "tags": ["Laravel", "PHP", "MariaDB", "Metronic UI"],
+    "tags": [
+      "Laravel",
+      "PHP",
+      "MariaDB",
+      "Metronic UI"
+    ],
     "status": "active",
     "featured": true
   },
   {
     "slug": "yes-crm",
-    "title": "Y.E.S. CRM",
-    "description": "Client Relation Management для Y.E.S. School. Система управления взаимоотношениями с клиентами.",
-    "longDescription": "Lorem ipsum dolor sit amet consectetur. Turpis erat morbi a sagittis dignissim gravida diam. Quis auctor sed facilisi tortor.",
+    "title": "ProLearning LMS",
+    "description": "ProLearning LMS - это B2B платформа, клиенты которой - малые и средние образовательные организации. Платформа предоставляет возможность публикации своих образовательных программ и распространение своим клиентам.",
+    "longDescription": "<появится после завершения разработки>",
     "role": "Fullstack разработчик",
-    "tags": ["NestJS", "Vue 3", "PostgreSQL", "Docker"],
+    "tags": [
+      "NestJS",
+      "Next",
+      "Shadcn",
+      "PostgreSQL"
+    ],
     "status": "active",
     "featured": true
   },
@@ -24,7 +34,13 @@
     "title": "Closed Messenger (PWA)",
     "description": "Закрытый мессенджер для своих. Next.js + NestJS + Prisma + PostgreSQL + IndexedDB.",
     "role": "CEO / Архитектор",
-    "tags": ["Next.js", "NestJS", "Prisma", "PostgreSQL", "PWA"],
+    "tags": [
+      "Next.js",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "PWA"
+    ],
     "status": "active",
     "featured": true
   },
@@ -33,7 +49,12 @@
     "title": "Личный блог / Портфолио",
     "description": "Этот сайт. Минималистичный портфолио-лендинг с блогом на Next.js SSG.",
     "role": "Fullstack разработчик",
-    "tags": ["Next.js", "Tailwind", "PWA", "TypeScript"],
+    "tags": [
+      "Next.js",
+      "Tailwind",
+      "PWA",
+      "TypeScript"
+    ],
     "status": "active",
     "featured": true
   }
