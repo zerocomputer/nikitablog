@@ -30,21 +30,6 @@
     "featured": true
   },
   {
-    "slug": "messenger",
-    "title": "Closed Messenger (PWA)",
-    "description": "Закрытый мессенджер для своих. Next.js + NestJS + Prisma + PostgreSQL + IndexedDB.",
-    "role": "CEO / Архитектор",
-    "tags": [
-      "Next.js",
-      "NestJS",
-      "Prisma",
-      "PostgreSQL",
-      "PWA"
-    ],
-    "status": "active",
-    "featured": true
-  },
-  {
     "slug": "nikitablog",
     "title": "Личный блог / Портфолио",
     "description": "Этот сайт. Минималистичный портфолио-лендинг с блогом на Next.js SSG.",
