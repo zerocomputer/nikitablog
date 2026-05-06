@@ -11,6 +11,7 @@ const NAV_ITEMS = [
 
 export default function Header() {
   const pathname = usePathname();
+  const isEnglish = pathname.startsWith("/blog/en");
 
   return (
     <header className="border-b border-zinc-800 bg-[#0f0f12]/80 backdrop-blur-sm sticky top-0 z-50">
@@ -24,7 +25,7 @@ export default function Header() {
 
         <ul className="flex items-center gap-1">
           {NAV_ITEMS.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
             return (
               <li key={item.href}>
                 <Link
@@ -40,6 +41,26 @@ export default function Header() {
               </li>
             );
           })}
+          {/* Language switcher — only on blog pages */}
+          {pathname.startsWith("/blog") && (
+            <li className="ml-2 pl-2 border-l border-zinc-700">
+              {isEnglish ? (
+                <Link
+                  href={pathname.replace(/^\/blog\/en/, "/blog/ru")}
+                  className="px-2 py-1.5 text-xs font-medium text-gray-400 hover:text-blue-400 hover:bg-zinc-800 rounded-lg transition-colors"
+                >
+                  🇷🇺 RU
+                </Link>
+              ) : (
+                <Link
+                  href={pathname.replace(/^\/blog(\/ru)?/, "/blog/en")}
+                  className="px-2 py-1.5 text-xs font-medium text-gray-400 hover:text-green-400 hover:bg-zinc-800 rounded-lg transition-colors"
+                >
+                  🇬🇧 EN
+                </Link>
+              )}
+            </li>
+          )}
         </ul>
       </nav>
     </header>

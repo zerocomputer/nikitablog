@@ -2,7 +2,10 @@
 title: "Hello, World!"
 date: "2026-05-04"
 excerpt: "Первый пост в моём новом блоге. Рассказываю о планах и мотивации."
-tags: ["личное", "проекты"]
+tags: ["личное", "проекты", "блог"]
+language: "ru"
+coverImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80"
+published: true
 ---
 
 # Hello, World!

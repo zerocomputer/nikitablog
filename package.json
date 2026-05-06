@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate-feed && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-feed": "npx tsx scripts/generate-feed.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1042.0",

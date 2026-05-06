@@ -2,7 +2,10 @@
 title: "Почему SteppeSolutions?"
 date: "2026-04-28"
 excerpt: "История создания компании, философия и миссия. Что движет нами каждый день."
-tags: ["steppesolutions", "бизнес", "проекты"]
+tags: ["steppesolutions", "бизнес", "проекты", "компания"]
+language: "ru"
+coverImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80"
+published: true
 ---
 
 # Почему SteppeSolutions?
