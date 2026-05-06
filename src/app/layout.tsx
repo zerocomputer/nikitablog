@@ -36,7 +36,6 @@ export const metadata: Metadata = {
   alternates: {
     languages: {
       ru: "/",
-      en: "/blog/en",
     },
   },
   icons: {
@@ -57,24 +56,6 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0f0f12" />
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="RSS"
-          href="/rss.xml"
-        />
-        <link
-          rel="alternate"
-          type="application/atom+xml"
-          title="Atom"
-          href="/feed.xml"
-        />
-        <link
-          rel="alternate"
-          type="application/feed+json"
-          title="JSON Feed"
-          href="/feed.json"
-        />
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
