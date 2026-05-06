@@ -1,15 +1,19 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllProjects, getProjectBySlug } from "@/lib/projects";
 import { notFound } from "next/navigation";
+import { locales, type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionary";
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 };
 
 export async function generateStaticParams() {
   const projects = getAllProjects();
-  return projects.map((project) => ({ slug: project.slug }));
+  return locales.flatMap((lang) =>
+    projects.map((project) => ({ lang, slug: project.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -22,12 +26,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const statusLabels: Record<string, string> = {
-  active: "Активен",
-  beta: "Бета",
-  archived: "Архив",
-};
-
 const statusColors: Record<string, string> = {
   active: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
   beta: "bg-amber-500/10 text-amber-400 border-amber-500/20",
@@ -35,17 +33,23 @@ const statusColors: Record<string, string> = {
 };
 
 export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
+  const { lang, slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+  const dict = await getDictionary(lang as Locale);
+
+  const statusLabels: Record<string, string> = {
+    active: dict.projects.statusActive,
+    beta: dict.projects.statusBeta,
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <Link
-        href="/projects"
+        href={`/${lang}/projects`}
         className="inline-flex items-center text-sm text-gray-500 hover:text-blue-400 transition-colors mb-8"
       >
-        ← Назад к проектам
+        {dict.projectsPage.backToProjects}
       </Link>
 
       <header className="mb-8">
@@ -56,12 +60,14 @@ export default async function ProjectPage({ params }: Props) {
           <span
             className={`shrink-0 inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-full border ${statusColors[project.status]}`}
           >
-            {statusLabels[project.status]}
+            {statusLabels[project.status] || project.status}
           </span>
         </div>
         <p className="mt-3 text-lg text-gray-400">{project.description}</p>
         {project.role && (
-          <p className="mt-1 text-sm text-blue-400">Роль: {project.role}</p>
+          <p className="mt-1 text-sm text-blue-400">
+            {lang === "en" ? "Role: " : "Роль: "}{project.role}
+          </p>
         )}
         {project.tags && project.tags.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-1.5">

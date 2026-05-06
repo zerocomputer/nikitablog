@@ -1,19 +1,36 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllProjects } from "@/lib/projects";
+import { locales, type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionary";
 
-export const metadata: Metadata = {
-  title: "Проекты",
-  description: "Проекты Никиты Сарычева.",
+type Props = {
+  params: Promise<{ lang: string }>;
 };
 
-export default function ProjectsPage() {
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang as Locale);
+  return {
+    title: dict.projectsPage.title,
+    description: `${
+      lang === "en" ? "Projects by Nikita Sarychev" : "Проекты Никиты Сарычева"
+    }.`,
+  };
+}
+
+export default async function ProjectsPage({ params }: Props) {
+  const { lang } = await params;
   const projects = getAllProjects();
+  const dict = await getDictionary(lang as Locale);
 
   const statusLabels: Record<string, string> = {
-    active: "Активен",
-    beta: "Бета",
-    archived: "Архив",
+    active: dict.projects.statusActive,
+    beta: dict.projects.statusBeta,
   };
 
   const statusColors: Record<string, string> = {
@@ -24,17 +41,17 @@ export default function ProjectsPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold tracking-tight text-white">Проекты</h1>
-      <p className="mt-2 text-gray-400">Мои проекты — от идей до продакшна.</p>
+      <h1 className="text-3xl font-bold tracking-tight text-white">{dict.projectsPage.title}</h1>
+      <p className="mt-2 text-gray-400">{lang === "en" ? "My projects — from ideas to production." : "Мои проекты — от идей до продакшна."}</p>
 
       {projects.length === 0 ? (
-        <p className="mt-12 text-center text-gray-500">Пока нет проектов.</p>
+        <p className="mt-12 text-center text-gray-500">{lang === "en" ? "No projects yet." : "Пока нет проектов."}</p>
       ) : (
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {projects.map((project) => (
             <Link
               key={project.slug}
-              href={`/projects/${project.slug}`}
+              href={`/${lang}/projects/${project.slug}`}
               className="group block p-6 rounded-2xl bg-[#1a1a22] border border-zinc-800 hover:border-blue-500/50 hover:bg-[#1f1f2a] transition-all"
             >
               <div className="flex items-start justify-between gap-3 mb-3">

@@ -1,0 +1,80 @@
+{
+  "site": {
+    "title": "@zerocomputer | Никита Сарычев",
+    "description": "Full-Stack разработчик. Laravel, NestJS, Next.js, Vue, React.",
+    "ogTitle": "@zerocomputer | Никита Сарычев",
+    "ogDescription": "Full-Stack разработчик"
+  },
+  "nav": {
+    "home": "Главная",
+    "blog": "Блог",
+    "projects": "Проекты"
+  },
+  "hero": {
+    "name": "Никита Сарычев",
+    "role": "Full-Stack разработчик",
+    "bio": "Занимаюсь полным циклом разработки различных веб-приложений, начиная от дизайна и реализации клиентской части, заканчивая серверной частью и API.",
+    "email": "Написать",
+    "github": "GitHub →"
+  },
+  "about": {
+    "title": "Кратко о себе",
+    "text": "Вернемся в 2014 год, первое касание с IT — попытка создания простеньких игр при помощи Unity3D. Было интересно создавать что-то осязаемое. По сей день этот интерес актуален, однако нынешние проекты интегрированы в мою жизнь."
+  },
+  "projects": {
+    "title": "Проекты",
+    "statusActive": "Активен",
+    "statusBeta": "Бета"
+  },
+  "experience": {
+    "title": "Опыт работы",
+    "items": [
+      {
+        "period": "ИЮЛЬ 2023 — НАСТ. ВРЕМЯ",
+        "company": "RedPoint: Двор24",
+        "role": "Fullstack-разработчик (Vue/Typescript/Java/Swift/Laravel)",
+        "description": "Продолжил разработку фирменного проекта \"Двор24\".",
+        "tags": ["Vue 3", "JavaScript", "TypeScript"]
+      },
+      {
+        "period": "СЕН. 2019 — ИЮЛЬ 2023",
+        "company": "ГАПОУ \"Оренбургский колледж экономики и информатики\"",
+        "role": "Веб-разработчик (NestJS, ReactJS, Vue 3)",
+        "description": "Занимался командной разработкой проектов для Министерства образования по г. Оренбургу и Оренбургской обл. В команде в основном выполнял роль backend-разработчика.",
+        "tags": ["NestJS", "PHP", "React", "Vue 3", "JavaScript", "TypeScript"]
+      },
+      {
+        "period": "ИЮНЬ 2018 — ОКТ. 2022",
+        "company": "Freelance · Workzilla.com",
+        "role": "Дизайнер UI/UX, Fullstack разработчик",
+        "description": "Реализовывал самые различные проекты, от простых дизайна сайтов-визиток и их верстки, до веб-приложений, API и дизайна мобильных приложений.",
+        "tags": ["NestJS", "React", "Vue 3", "JavaScript", "TypeScript", "PHP", "Laravel"]
+      }
+    ]
+  },
+  "blog": {
+    "title": "Блог",
+    "description": "Мысли, опыт, эксперименты",
+    "all": "Все",
+    "readMore": "Читать →",
+    "allPosts": "Все записи →",
+    "latest": "Последние записи",
+    "filteredByTag": "Записи по тегу",
+    "noPosts": "Пока нет записей",
+    "tags": "Теги",
+    "backToBlog": "← Назад к блогу"
+  },
+  "projectsPage": {
+    "title": "Проекты",
+    "backToProjects": "← Назад к проектам",
+    "notFound": "Проект не найден"
+  },
+  "footer": {
+    "copyright": "© {year} Никита Сарычев",
+    "builtWith": "Разработано на Next.js + Tailwind",
+    "sourceCode": "Открытый исходный код"
+  },
+  "common": {
+    "loading": "Загрузка..."
+  }
+}

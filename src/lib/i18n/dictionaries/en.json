@@ -1,0 +1,80 @@
+{
+  "site": {
+    "title": "@zerocomputer | Nikita Sarychev",
+    "description": "Full-Stack developer. Laravel, NestJS, Next.js, Vue, React.",
+    "ogTitle": "@zerocomputer | Nikita Sarychev",
+    "ogDescription": "Full-Stack developer"
+  },
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects"
+  },
+  "hero": {
+    "name": "Nikita Sarychev",
+    "role": "Full-Stack Developer",
+    "bio": "I handle the full development cycle of web applications — from design and frontend implementation to backend architecture and APIs.",
+    "email": "Contact me",
+    "github": "GitHub →"
+  },
+  "about": {
+    "title": "About Me",
+    "text": "Let's go back to 2014 — my first encounter with IT was trying to build simple games in Unity3D. I enjoyed creating something tangible. That spark is still alive today, though my projects have grown and become an integral part of my life."
+  },
+  "projects": {
+    "title": "Projects",
+    "statusActive": "Active",
+    "statusBeta": "Beta"
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "period": "JUL 2023 — PRESENT",
+        "company": "RedPoint: Dvor24",
+        "role": "Fullstack Developer (Vue/Typescript/Java/Swift/Laravel)",
+        "description": "Continued development of the flagship project \"Dvor24\" — a monolithic web application built with PHP (Laravel) and Vue 3 as the main client framework.",
+        "tags": ["Vue 3", "JavaScript", "TypeScript"]
+      },
+      {
+        "period": "SEP 2019 — JUL 2023",
+        "company": "Orenburg College of Economics & IT",
+        "role": "Web Developer (NestJS, ReactJS, Vue 3)",
+        "description": "Worked in a team on projects for the Ministry of Education of the Orenburg region. Primarily served as a backend developer.",
+        "tags": ["NestJS", "PHP", "React", "Vue 3", "JavaScript", "TypeScript"]
+      },
+      {
+        "period": "JUN 2018 — OCT 2022",
+        "company": "Freelance · Workzilla.com",
+        "role": "UI/UX Designer, Fullstack Developer",
+        "description": "Delivered a wide variety of projects — from simple landing page design and markup to full web applications, APIs, and mobile app design.",
+        "tags": ["NestJS", "React", "Vue 3", "JavaScript", "TypeScript", "PHP", "Laravel"]
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Thoughts, experience, experiments",
+    "all": "All",
+    "readMore": "Read →",
+    "allPosts": "All posts →",
+    "latest": "Latest posts",
+    "filteredByTag": "Posts tagged",
+    "noPosts": "No posts yet",
+    "tags": "Tags",
+    "backToBlog": "← Back to blog"
+  },
+  "projectsPage": {
+    "title": "Projects",
+    "backToProjects": "← Back to projects",
+    "notFound": "Project not found"
+  },
+  "footer": {
+    "copyright": "© {year} Nikita Sarychev",
+    "builtWith": "Built with Next.js + Tailwind",
+    "sourceCode": "Open source code"
+  },
+  "common": {
+    "loading": "Loading..."
+  }
+}

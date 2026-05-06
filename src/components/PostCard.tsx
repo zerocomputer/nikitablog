@@ -1,17 +1,22 @@
 import Link from "next/link";
 import type { PostMeta } from "@/lib/posts";
 
+type Props = {
+  post: PostMeta;
+  lang: string;
+};
+
 const LANG_LABELS: Record<string, { label: string; flag: string }> = {
   ru: { label: "RU", flag: "🇷🇺" },
   en: { label: "EN", flag: "🇬🇧" },
 };
 
-export default function PostCard({ post }: { post: PostMeta }) {
+export default function PostCard({ post, lang }: Props) {
   const langInfo = LANG_LABELS[post.language] ?? { label: post.language.toUpperCase(), flag: "" };
 
   return (
     <Link
-      href={`/blog/${post.slug}`}
+      href={`/${lang}/blog/${post.slug}`}
       className="group block rounded-2xl bg-[#1a1a22] border border-zinc-800 hover:border-blue-500/50 hover:bg-[#1f1f2a] transition-all overflow-hidden"
     >
       {/* Cover image */}
