@@ -9,6 +9,18 @@
     <atom:link href="https://zerocomputer.ru/rss.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Why NestJS Is My Go-To Backend Framework in 2026</title>
+      <link>https://zerocomputer.ru/blog/why-nestjs.en</link>
+      <guid isPermaLink="true">https://zerocomputer.ru/blog/why-nestjs.en</guid>
+      <description>After 5 years of experimenting with Express, Fastify, and Koa, I settled on NestJS. Here&apos;s why it&apos;s the best choice for serious projects.</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <category>nestjs</category>
+      <category>backend</category>
+      <category>typescript</category>
+      <category>architecture</category>
+    </item>
+
+    <item>
       <title>Почему NestJS — мой выбор для бэкенда в 2026</title>
       <link>https://zerocomputer.ru/blog/why-nestjs</link>
       <guid isPermaLink="true">https://zerocomputer.ru/blog/why-nestjs</guid>

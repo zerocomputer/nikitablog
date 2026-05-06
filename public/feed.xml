@@ -12,6 +12,23 @@
   </author>
   
   <entry>
+    <id>https://zerocomputer.ru/blog/why-nestjs.en</id>
+    <title>Why NestJS Is My Go-To Backend Framework in 2026</title>
+    <link href="https://zerocomputer.ru/blog/why-nestjs.en" rel="alternate" />
+    <published>2026-05-06T00:00:00.000Z</published>
+    <updated>2026-05-06T00:00:00.000Z</updated>
+    <summary type="html">After 5 years of experimenting with Express, Fastify, and Koa, I settled on NestJS. Here&apos;s why it&apos;s the best choice for serious projects.</summary>
+    <author>
+      <name>Никита Сарычев</name>
+      <email>zerocomputer@yandex.ru</email>
+    </author>
+    <category term="nestjs" />
+    <category term="backend" />
+    <category term="typescript" />
+    <category term="architecture" />
+  </entry>
+
+  <entry>
     <id>https://zerocomputer.ru/blog/why-nestjs</id>
     <title>Почему NestJS — мой выбор для бэкенда в 2026</title>
     <link href="https://zerocomputer.ru/blog/why-nestjs" rel="alternate" />

@@ -10,6 +10,21 @@
   },
   "items": [
     {
+      "id": "https://zerocomputer.ru/blog/why-nestjs.en",
+      "url": "https://zerocomputer.ru/blog/why-nestjs.en",
+      "title": "Why NestJS Is My Go-To Backend Framework in 2026",
+      "content_text": "After 5 years of experimenting with Express, Fastify, and Koa, I settled on NestJS. Here's why it's the best choice for serious projects.",
+      "summary": "After 5 years of experimenting with Express, Fastify, and Koa, I settled on NestJS. Here's why it's the best choice for serious projects.",
+      "date_published": "2026-05-06T00:00:00.000Z",
+      "tags": [
+        "nestjs",
+        "backend",
+        "typescript",
+        "architecture"
+      ],
+      "_language": "en"
+    },
+    {
       "id": "https://zerocomputer.ru/blog/why-nestjs",
       "url": "https://zerocomputer.ru/blog/why-nestjs",
       "title": "Почему NestJS — мой выбор для бэкенда в 2026",
