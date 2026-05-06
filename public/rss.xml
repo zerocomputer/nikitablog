@@ -5,8 +5,19 @@
     <link>https://zerocomputer.ru</link>
     <description>Блог про AI-инструменты, разработку и технологии.</description>
     <language>ru</language>
-    <lastBuildDate>Wed, 06 May 2026 04:30:26 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://zerocomputer.ru/rss.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>Почему NestJS — мой выбор для бэкенда в 2026</title>
+      <link>https://zerocomputer.ru/blog/why-nestjs</link>
+      <guid isPermaLink="true">https://zerocomputer.ru/blog/why-nestjs</guid>
+      <description>После 5 лет экспериментов с Express, Fastify и Koa я остановился на NestJS. Рассказываю, почему это лучший выбор для серьёзных проектов.</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <category>nestjs</category>
+      <category>backend</category>
+      <category>typescript</category>
+      <category>архитектура</category>
+    </item>
   </channel>
 </rss>

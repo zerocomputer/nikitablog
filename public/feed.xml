@@ -4,11 +4,27 @@
   <subtitle>Блог про AI-инструменты, разработку и технологии.</subtitle>
   <link href="https://zerocomputer.ru/feed.xml" rel="self" />
   <link href="https://zerocomputer.ru" rel="alternate" />
-  <updated>2026-05-06T04:30:26.741Z</updated>
+  <updated>2026-05-06T00:00:00.000Z</updated>
   <id>https://zerocomputer.ru/</id>
   <author>
     <name>Никита Сарычев</name>
     <email>zerocomputer@yandex.ru</email>
   </author>
   
+  <entry>
+    <id>https://zerocomputer.ru/blog/why-nestjs</id>
+    <title>Почему NestJS — мой выбор для бэкенда в 2026</title>
+    <link href="https://zerocomputer.ru/blog/why-nestjs" rel="alternate" />
+    <published>2026-05-06T00:00:00.000Z</published>
+    <updated>2026-05-06T00:00:00.000Z</updated>
+    <summary type="html">После 5 лет экспериментов с Express, Fastify и Koa я остановился на NestJS. Рассказываю, почему это лучший выбор для серьёзных проектов.</summary>
+    <author>
+      <name>Никита Сарычев</name>
+      <email>zerocomputer@yandex.ru</email>
+    </author>
+    <category term="nestjs" />
+    <category term="backend" />
+    <category term="typescript" />
+    <category term="архитектура" />
+  </entry>
 </feed>

@@ -8,5 +8,21 @@
     "name": "Никита Сарычев",
     "url": "https://github.com/zerocomputer"
   },
-  "items": []
+  "items": [
+    {
+      "id": "https://zerocomputer.ru/blog/why-nestjs",
+      "url": "https://zerocomputer.ru/blog/why-nestjs",
+      "title": "Почему NestJS — мой выбор для бэкенда в 2026",
+      "content_text": "После 5 лет экспериментов с Express, Fastify и Koa я остановился на NestJS. Рассказываю, почему это лучший выбор для серьёзных проектов.",
+      "summary": "После 5 лет экспериментов с Express, Fastify и Koa я остановился на NestJS. Рассказываю, почему это лучший выбор для серьёзных проектов.",
+      "date_published": "2026-05-06T00:00:00.000Z",
+      "tags": [
+        "nestjs",
+        "backend",
+        "typescript",
+        "архитектура"
+      ],
+      "_language": "ru"
+    }
+  ]
 }
