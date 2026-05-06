@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts, getAllTags } from "@/lib/posts";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://zerocomputer.ru";
   const entries: MetadataRoute.Sitemap = [];
