@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>zero/dev — Блог Никиты Сарычева</title>
+  <subtitle>Блог про AI-инструменты, разработку и технологии.</subtitle>
+  <link href="https://zerocomputer.ru/feed.xml" rel="self" />
+  <link href="https://zerocomputer.ru" rel="alternate" />
+  <updated>2026-05-06T04:28:47.201Z</updated>
+  <id>https://zerocomputer.ru/</id>
+  <author>
+    <name>Никита Сарычев</name>
+    <email>zerocomputer@yandex.ru</email>
+  </author>
+  
+</feed>

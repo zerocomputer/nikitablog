@@ -1,0 +1,12 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "zero/dev — Блог Никиты Сарычева",
+  "home_page_url": "https://zerocomputer.ru",
+  "feed_url": "https://zerocomputer.ru/feed.json",
+  "description": "Блог про AI-инструменты, разработку и технологии.",
+  "author": {
+    "name": "Никита Сарычев",
+    "url": "https://github.com/zerocomputer"
+  },
+  "items": []
+}
