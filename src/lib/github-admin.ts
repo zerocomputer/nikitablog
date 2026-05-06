@@ -162,8 +162,32 @@ export async function saveProjectsFile(
 }
 
 /**
- * Get the main page.tsx (profile data is hardcoded there).
- * We read it via GitHub API.
+ * Get an i18n dictionary file (ru.json / en.json).
+ */
+export async function getDictionaryFile(token: string, lang: string) {
+  return getFile(token, `src/lib/i18n/dictionaries/${lang}.json`);
+}
+
+/**
+ * Save an i18n dictionary file.
+ */
+export async function saveDictionaryFile(
+  token: string,
+  lang: string,
+  content: string,
+  sha: string
+) {
+  return saveFile(
+    token,
+    `src/lib/i18n/dictionaries/${lang}.json`,
+    content,
+    `Update i18n dictionary (${lang})`,
+    sha
+  );
+}
+
+/**
+ * Get the main page.tsx (profile data is hardcoded there, deprecated with i18n).
  */
 export async function getProfilePage(token: string) {
   return getFile(token, "src/app/page.tsx");

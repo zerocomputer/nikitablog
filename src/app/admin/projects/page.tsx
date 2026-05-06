@@ -40,6 +40,29 @@ export default function AdminProjects() {
     }
   }
 
+  const handleDelete = async (projectSlug: string, projectTitle: string) => {
+    if (!confirm(`Удалить проект "${projectTitle}"? Это действие нельзя отменить.`)) return;
+    const token = localStorage.getItem("github_token");
+    if (!token) return;
+
+    try {
+      const data = await getProjectsFile(token);
+      if (!data) return;
+      const updated = JSON.parse(data.content).filter((p: any) => p.slug !== projectSlug);
+      const { saveProjectsFile } = await import("@/lib/github-admin");
+      const ok = await saveProjectsFile(token, JSON.stringify(updated, null, 2), data.sha);
+      if (ok) {
+        setProjects(updated);
+        alert(`Проект "${projectTitle}" удалён.`);
+      } else {
+        alert("Ошибка при удалении.");
+      }
+    } catch (err) {
+      alert("Ошибка при удалении");
+      console.error(err);
+    }
+  };
+
   const handleNewProject = () => {
     const slug = prompt("Введите slug для нового проекта (латиница):");
     if (slug && slug.trim()) {
@@ -82,35 +105,42 @@ export default function AdminProjects() {
       ) : (
         <div className="space-y-3">
           {projects.map((project) => (
-            <Link
-              key={project.slug}
-              href={`/admin/projects/edit?slug=${project.slug}`}
-              className="group block p-5 rounded-2xl bg-[#1a1a22] border border-zinc-800 hover:border-blue-500/50 transition-all"
-            >
+            <div className="group block p-5 rounded-2xl bg-[#1a1a22] border border-zinc-800 hover:border-blue-500/50 transition-all">
               <div className="flex items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <h2 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+                <Link
+                  href={`/admin/projects/edit?slug=${project.slug}`}
+                  className="min-w-0 flex-1"
+                >
+                  <h2 className="font-semibold text-white hover:text-blue-400 transition-colors">
                     {project.title}
                   </h2>
                   <p className="mt-1 text-sm text-gray-400 line-clamp-1">
                     {project.description}
                   </p>
-                </div>
-                <span
-                  className={`shrink-0 inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-full border ${
-                    project.status === "active"
-                      ? "bg-green-500/10 text-green-400 border-green-500/20"
+                </Link>
+                <div className="flex items-center gap-2 shrink-0">
+                  <span
+                    className={`inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-full border ${
+                      project.status === "active"
+                        ? "bg-green-500/10 text-green-400 border-green-500/20"
+                        : project.status === "beta"
+                        ? "bg-yellow-500/10 text-yellow-400 border-yellow-500/20"
+                        : "bg-zinc-500/10 text-zinc-400 border-zinc-500/20"
+                    }`}
+                  >
+                    {project.status === "active"
+                      ? "Активен"
                       : project.status === "beta"
-                      ? "bg-yellow-500/10 text-yellow-400 border-yellow-500/20"
-                      : "bg-zinc-500/10 text-zinc-400 border-zinc-500/20"
-                  }`}
-                >
-                  {project.status === "active"
-                    ? "Активен"
-                    : project.status === "beta"
-                    ? "Бета"
-                    : "Архив"}
-                </span>
+                      ? "Бета"
+                      : "Архив"}
+                  </span>
+                  <button
+                    onClick={() => handleDelete(project.slug, project.title)}
+                    className="px-2 py-1 text-xs font-medium text-red-400 hover:text-red-300 bg-red-500/10 hover:bg-red-500/20 rounded-lg transition-colors"
+                  >
+                    Удалить
+                  </button>
+                </div>
               </div>
               {project.tags && project.tags.length > 0 && (
                 <div className="mt-2 flex flex-wrap gap-1.5">
@@ -124,7 +154,7 @@ export default function AdminProjects() {
                   ))}
                 </div>
               )}
-            </Link>
+            </div>
           ))}
         </div>
       )}
